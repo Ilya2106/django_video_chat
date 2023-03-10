@@ -5,19 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Call</title>
+    <title>Видео-чат</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding-top: 24px;
-            min-height: 90vh;
-        }
-    </style>
 
     <script>
         let myName;
@@ -30,31 +19,31 @@
             <!-- to input username and login -->
             <div id="userName">
                 <div style="display: flex; flex-direction: column; align-items: center; width: 300px;">
-                    <input placeholder="What should we call you?"
+                    <input placeholder="Как вас называть?"
                         style="text-align:center; height: 50px; font-size: xx-large;" type="text" name=""
                         id="userNameInput">
                     <div style="height: 5px;"></div>
-                    <button onclick="login()" class="actionButton">Login</button>
+                    <button onclick="login()" class="actionButton">Войти</button>
                 </div>
             </div>
 
             <!-- to display current login user information  -->
             <div id="userInfo">
                 <div style="display: flex; flex-direction: column; align-items: center; width: 300px;">
-                    <h1>Hello, <span id="nameHere"></span></h1>
+                    <h1>Привет, <span id="nameHere"></span></h1>
                 </div>
             </div>
 
             <!-- to make a call with name -->
             <div id="call">
                 <div class="dialWrapper">
-                    <input placeholder="Whom to call?" style="text-align:center; height: 50px; font-size: xx-large;"
+                    <input placeholder="Кому позвонить?" style="text-align:center; height: 50px; font-size: xx-large;"
                         type="text" name="callName" id="callName">
                     <div class="dialNumpadHWrapper">
                         <div class="dialNumber">
                         </div>
                         <div class="dialNumber">
-                            <button class="dialActionButton" onclick="call()">Call</button>
+                            <button class="dialActionButton" onclick="call()">Позвонить</button>
                         </div>
                         <div class="dialNumber">
                         </div>
@@ -67,7 +56,7 @@
             <div id="answer">
                 <div class="incomingWrapper">
                     <div class="itemWrapper">
-                        <h2>Incomming Call</h2>
+                        <h2>Входящий вызов</h2>
                     </div>
                     <div class="itemWrapper">
                         <img id="profileImageA" style="padding: 30px; width: 140px; height: 140px;"
@@ -77,7 +66,7 @@
                         <h2 style="line-height: 0px;"><span id="callerName"></span></h2>
                     </div>
                     <div class="itemWrapper" style="display: flex; flex-direction: row; margin-bottom: 20px;">
-                        <button class="actionButton" onclick="answer()">Answer</button>
+                        <button class="actionButton" onclick="answer()">Ответить</button>
                     </div>
                 </div>
             </div>
@@ -86,7 +75,7 @@
             <div id="calling">
                 <div class="incomingWrapper">
                     <div class="itemWrapper">
-                        <h2>Calling</h2>
+                        <h2>Ожидание...</h2>
                     </div>
                     <div class="itemWrapper">
                         <img id="profileImageCA" style="padding: 30px; width: 140px; height: 140px;"
@@ -102,7 +91,7 @@
             <div id="inCall">
                 <div class="incomingWrapper">
                     <div class="itemWrapper">
-                        <h3>On Call With</h3>
+                        <h3>На связи с</h3>
                         <h2 style="line-height: 0px;"><span id="otherUserNameC"></span></h2>
                     </div>
                 </div>
@@ -125,23 +114,6 @@
     </div>
     <div style="flex-grow: 1;">
     </div>
-    <div>
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <a href="https://www.youtube.com/watch?v=N7lbtbmqLvM">
-                Video Call in Django with WebRTC and Django Channels (Video Guide)
-            </a>
-            <a href="https://www.bloggernepal.com/2021/10/video-call-in-django-with-webrtc-and-channels.html">
-                Video Call in Django with WebRTC and Channels (Article)
-            </a>
-            <a href="https://www.bloggernepal.com/2021/05/setup-stun-and-turn-server-on-ubuntu.html">
-                Setup STUN and TURN server on Ubuntu
-            </a>
-            <a href="https://github.com/InfoDevkota/WebRTC-Django-Django-Channels-Video-Call">
-                Github Repository
-            </a>
-        </div>
-    </div>
-
 
     <script src="{% static 'js/script.js' %}"></script>
     <script>
@@ -151,7 +123,6 @@
         document.getElementById("inCall").style.display = "none";
         document.getElementById("calling").style.display = "none";
         document.getElementById("videos").style.display = "none";
-
     </script>
     <script>
         function login() {

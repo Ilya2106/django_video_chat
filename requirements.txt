@@ -2,3 +2,4 @@ Django
 channels==3.0.4
 daphne
 gunicorn==20.1.0
+channels-redis
